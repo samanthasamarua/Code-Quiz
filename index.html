@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="Asset/style.css">
+    <title>JavaScript Quiz</title>
+</head>
+<body>
+    <div class="top-bar">
+        <p id="Timer">Timer: 00:00</p>
+        <button class="btn-highscore">View Highscores</button>
+    </div>
+
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="welcomePage">
+        <header class="quiz-intro">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</p>
+            <button id="btn-start" class="btn-start">Start Quiz</button>
+        </header>
+    </div>
+
+    <!-- Main Quiz Content -->
+    <main>
+        <section id="questionPage" class="questions hide">
+            <h2 id="questionText"></h2>
+            <div id="answerOptions"></div>
+        </section>
+
+        <section class="quiz-complete hide">
+            <h2>All done!</h2>
+            <p>Your final score is <span id="final-score">00</span></p>
+            <form>
+                <label for="initials">Enter Initials:</label>
+                <input type="text" id="initials" name="initials">
+                <button type="button" onclick="submitScore()">Submit</button>
+            </form>
+        </section>
+
+        <section class="highscores-page hide">
+            <h2>Highscores:</h2>
+            <ol>
+            </ol>
+            <button onclick="goBack()">Go Back</button>
+            <button onclick="clearHighscores()">Clear Highscores</button>
+        </section>
+    </main>
+
+    <script src='Asset/script.js'></script>
+</body>
+</html>
