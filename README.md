@@ -42,4 +42,7 @@ Images below highlights the Coding Quiz Challenge
 <img src="./Asset/Images/Coding Quiz_HighScore.png">
 
 # Deployed Link
+https://samanthasamarua.github.io/Code-Quiz/
 
+# Github Repository
+https://github.com/samanthasamarua/Code-Quiz
