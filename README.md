@@ -38,7 +38,7 @@ Images below highlights the Coding Quiz Challenge
 3. End Page
 <img src="./Asset/Images/Coding Quiz_End.png">
 
-3. High Score
+4. High Score
 <img src="./Asset/Images/Coding Quiz_HighScore.png">
 
 # Deployed Link
