@@ -28,3 +28,18 @@ To install this code, refer to the Github link to clone the repository
 
 # Usage
 Images below highlights the Coding Quiz Challenge
+
+1. Home Page 
+<img src="./Asset/Images/Coding Quiz_Home.png">
+
+2. Quiz
+<img src="./Asset/Images/Coding Quiz_Quiz.png">
+
+3. End Page
+<img src="./Asset/Images/Coding Quiz_End.png">
+
+3. High Score
+<img src="./Asset/Images/Coding Quiz_HighScore.png">
+
+# Deployed Link
+
