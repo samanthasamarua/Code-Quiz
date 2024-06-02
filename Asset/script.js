@@ -1,29 +1,30 @@
 // Initialise object for questions 
-var questions = [{
-    text: "Commonly used data types DO NOT include?",
+var questions = [
+  {
+    text: "Which of the following is NOT considered a commonly used data type in JavaScript?",
     options: ["strings", "booleans", "alerts", "numbers"],
     correctAnswer: "alerts"
-},
-{
-    text: "The condition if/else statement is enclosed within _____.",
+  },
+  {
+    text: "How is the condition for an if/else statement typically enclosed?",
     options: ["quotes", "curly brackets", "parentheses", "square brackets"],
     correctAnswer: "parentheses"
-},
-{
-    text: "Arrays in JavaScript can be used to store _____.",
-    options: ["numbers and strings", "other arrays", "booleans", "all of these"],
-    correctAnswer: "all of these"
-},
-{
-    text: "String values must be enclosed within _____ when being assigned to variables.",
+  },
+  {
+    text: "What can arrays in JavaScript be utilized to store?",
+    options: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+    correctAnswer: "all of the above"
+  },
+  {
+    text: "When assigning string values to variables in JavaScript, what punctuation must enclose the string?",
     options: ["commas", "curly brackets", "quotes", "parentheses"],
     correctAnswer: "quotes"
-},
-{
-    text: "A very useful tool used during development and debugging for printing content to the debugger is:",
+  },
+  {
+    text: "Which tool is frequently employed during development and debugging for outputting content to the debugger?",
     options: ["JavaScript", "terminal/bash", "for loops", "console.log"],
     correctAnswer: "console.log"
-}
+  }
 ];
 
 // The index of the current question
@@ -153,8 +154,6 @@ function endQuiz() {
     document.getElementById("start-again-button").style.display = "block";
 }
 
-
-
 // The function to save a score
 function saveScore() {
     // Get the initials input
@@ -189,6 +188,36 @@ function saveScore() {
     displayHighscores();
 }
 
+// The function to display the high scores
+function displayHighscores() {
+    // Get the highscores from local storage
+    var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+    // Get the HTML element where the highscores will be displayed
+    var highscoresDiv = document.getElementById("highscores");
+
+    // Clear the highscores div
+    highscoresDiv.innerHTML = "";
+
+    // Sort the scores in descending order based on the 'score' property
+    highscores.sort((a, b) => b.score - a.score);
+    
+
+    // Create the ordered list and append it to the div
+    const ol = document.createElement("ol");
+    highscoresDiv.appendChild(ol);
+
+ // Create and append list items with numbering
+let counter = 1;
+highscores.forEach(function(score) {
+    const li = document.createElement("li");
+    li.textContent = `${counter}. ${score.initials}: ${score.score}`;
+    li.setAttribute("style", "background-color: white; color: purple; margin: 0.5rem; font-size: large; padding: 0.5rem; display: block;");
+    ol.appendChild(li);
+    counter++;
+});
+
+}
 
 function clearScores() {
     // Clear the highscores from local storage
